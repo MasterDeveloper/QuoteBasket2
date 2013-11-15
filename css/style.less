@@ -83,12 +83,13 @@
 @baseFamily		:	'Overlock', cursive;
 @altFamily		:	'Dosis', sans-serif;
 @baseFont		:	15px;
-@headerColor	: 	#181818;
+@headerColor	: 	#017d77;
 @themeColor		:	#00b6ad;
 @bodybg			: 	#f5f5f5;
 @Color1			:	#dcdcdc;
 @Color2			:	#ababab;
-
+@Color3			:	#cecece;
+@yellow			: 	#fdae12;
 
 // colors
 @textColor		: 	#666666;// #4b4b4b;
@@ -137,7 +138,7 @@ h2{
 	.heading( 200,  52px,  @altFamily, black, 0 0 10px);
 }
 h3{
-	.heading( 100,  26px,  @baseFamily, inherit, 0 0 10px);
+	.heading( 100,  26px,  @altFamily, inherit, 0 0 10px);
 }
 h4{
 	.heading( bold,  16px,  @baseFamily, inherit, 0 0 10px);
@@ -170,27 +171,24 @@ p{
 /* Header
 ______________________*/
 #header-wrap{
-	background:url(../images/pattren-3.png) repeat-x left bottom @headerColor;
+	background:@headerColor;
 	padding:12px 0 20px;
 	.divider{
 		color: white;
 	}
-	a{
-		margin:0 6px;
-		font-size:12px;
-		vertical-align:middle;
-		display:inline-block;
-		&:hover{
-			color: @linkHoverColor + #363636;
-		}
-	}
-	.social-icons{
+	.header-social-icons{
 		a{
-			color: @linkHoverColor + #363636;
+			color: #003e3b;
+			margin-right:15px;
 			&:hover{
-				color: @linkColor;
+				color: @themeColor;
 			}
 		}
+	}
+}
+#header-right{
+	a{
+		margin-left:10px;
 	}
 }
 .social-icons{
@@ -217,15 +215,10 @@ ______________________*/
 /* Navigation
 ______________________*/
 #nav-wrap{
-	background: @themeColor;
-	min-height:50px;
 	position:relative;
-	padding:5px 0;
 }
 .navbar-transparent{
-	background:none;
-	margin-bottom:0;
-	border:1px solid #fd9137;
+	background:url(../images/nav-wrap.png) repeat-x;
 	.radius(0);
 	.navbar-toggle{
 		background: black;
@@ -234,15 +227,35 @@ ______________________*/
 		}
 	}
 	.navbar-brand{
+		margin-top:20px;
 		margin-left:0 !important;
 	}
 	.nav{
 		a{
-			color:#000;
+			color:white;
+			font-family: @altFamily;
+			text-transform: uppercase;
+			text-shadow: 1px 1px 1px black;
+			.gradient(#00d9cf, #017e77);
+			.radius(0 0 4px 4px);
+			border: 1px solid #017e77;
+			border-top:none;
+			width:100px;
+			text-align:center;
+			margin-right:4px;
+			margin-bottom:20px;
+			.box-shadow(0 1px 2px rgba(0,0,0,0.5));
+			[class^="icon"]{
+				display:block;
+				text-align:center;
+				font-size:1.5em;
+			}
 			&:focus,
 			&:hover{
-				color:white;
-				background: none;
+				color:black;
+				background:white;
+				text-shadow: none;
+				
 			}
 		}
 		.active{
@@ -299,7 +312,7 @@ ______________________*/
 			font-weight:bold;
 			min-width:30px;
 			height:30px;
-			line-height:29px;
+			line-height:26px;
 			text-align:center;
 			.box-sizing(border-box);
 			.radius(15px);
@@ -421,10 +434,10 @@ ______________________*/
 }
 
 ::selection{
-	color:@themeColor;
+	color:#111;
 }
 ::-moz-selection{
-	color:@themeColor;
+	color:#111;
 } 
 
 .list-quote{
@@ -517,6 +530,39 @@ ______________________*/
 /**********************************
 		Buttons Settings 
 ************************************/
+.button-variant(@color; @background; @border) {
+  color: @color;
+  .gradient(@background, @border);
+  border-color: @border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: @color;
+    background-color: @background;
+        border-color: @border;
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+}
+
 .btn-primary{
 	white-space:nowrap;
 	text-overflow:ellipsis;
@@ -549,47 +595,122 @@ ______________________*/
 		border:1px solid @themeColor;
 	}
 }
+.btn-yellow {
+	.button-variant(black, #ffec9a, #ffcc03);
+}
+.btn-facebook {
+	.button-variant(white, #5977ad, #385182);
+}
 
 /**********************************
 		Sidebar Settings 
 ***********************************/
 
-.dotted-section{
+.border-section{
 	padding:20px 0;
-	border-top:1px dotted #dadada;
+	border-top:1px solid @borderColor;
 	&:first-child,
 	&.no-border{
 		border-top:none;
 	}
 	&.no-border{
 		padding-top:0;
-		
 	}
-		
 }
-.theme-box{
-	background:url(../images/pattren-6.jpg);
+	.btn-submit{
+		font-size:24px;
+		color:black;
+		.icon-quote-right,
+		.icon-quote-left{
+			color:#ec8d0b;
+		}
+		&:focus,
+		&:hover{
+			color:black;
+		}
+	}
+.yellow,
+h3 .yellow{
+	color: @yellow;
 }
-.box-header{
+
+.sidebar-header{
 	color:@textColor;
-	background:url(../images/pattren-5.jpg);
 	padding:10px;
+	border-bottom:1px solid @borderColor;
+	margin-bottom:20px;
 	h3{
 		margin-bottom:0;
-	}
-}
-.box-body{
-	padding:13px;
-	a{
-		color : @textColor;
+		color:black;
 	}
 }
 .btn{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 	&:focus{
 		outline:none;
 	}
 }
-
+.quote-box{
+	position:relative;
+	background:@themeColor;
+	padding:35px 20px 10px;
+	margin-top:35px;
+	margin-bottom:10px;
+	.radius(6px);
+	p{
+		color: white;
+		font-style:italic;
+	}
+	a{
+		color:black;
+	}
+	.icon-quote-right{
+		color: @yellow;
+		background: @bodybg;
+		display:inline-block;
+		width:60px;
+		height:60px;
+		font-size:25px;
+		.radius(50%);
+		line-height:70px;
+		text-align:center;
+		position:absolute;
+		left:50%;
+		margin-left:-1.2em;
+		top:-30px;
+	}
+	.icon-quote-left{
+		color:#018980;
+		font-size:1.5em;
+		margin-right:10px;
+	}
+}
+.quote-list{
+	margin-bottom:20px;
+	ul{
+		padding:0;
+	}
+	li{
+		list-style:none;
+		margin-bottom:7px;
+		color: #666;
+		&:before{
+			display:inline-block;
+			content: "";
+			width:20px;
+			margin-right:10px;
+			background:url(../images/quote-list.png) no-repeat center center;
+			height:10px;
+			
+		}
+	}
+	li a{
+		color:black;
+		padding-right:5px;
+	}
+}
 
 
 /************************
@@ -602,6 +723,14 @@ ______________________*/
 }
 .author-gallery-wrap{
 }
+.thumb-lists{
+	a.thumbnail{
+		background:@Color3;
+		margin-bottom:8px;
+		.radius(0);
+	}
+}
+
 a.thumbnail{
 	transition:all 0.4s ease 0s;
 	position:relative;
@@ -645,6 +774,9 @@ a.thumbnail{
 	.gallery-footer{
 		padding:10px 0;
 		font-weight:normal;
+		span{
+			vertical-align:middle;
+		}
 		.icon-quote-left{
 			color:@Color1;
 			margin-right:10px;
@@ -795,7 +927,6 @@ a.thumbnail{
 }
 .footer-bottom{
 	background:@footerBottom;
-	color: black;
 	border-top: 1px solid @borderColor - #5c5c5c;
 	border-bottom: 1px solid @borderColor - #5c5c5c;
 	margin-bottom:9px;
@@ -805,6 +936,9 @@ a.thumbnail{
 		margin-bottom:0;
 	}
 	
+}
+.theme-btn{
+	color: white;
 }
 .theme-btn:focus,
 .theme-btn:hover,
@@ -854,6 +988,37 @@ a.thumbnail{
 .tab-pane{
 	padding:25px 0 0;
 }
+
+
+
+.input-group{
+	.btn{
+		transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+		border:1px solid @borderColor;
+		border-left: none;
+		background:white;
+	}
+	[class^="icon-"]{
+		line-height:inherit;
+		color:@themeColor - #222;
+		
+	}
+	.form-control{
+		border-right:none;
+	}
+	.form-control:focus + .input-group-btn .btn{
+		
+		border:1px solid #66AFE9;
+		box-shadow:	0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+		.box-sizing;
+		border-left:none;
+		
+	}
+}
+
+
+
+
 
 
 /**********************
@@ -967,7 +1132,22 @@ a.thumbnail{
 .author-listing-section ul{
 	min-height:inherit;
 }
-
+.navbar-transparent{
+	.navbar-brand{
+		margin-top:0px;	
+	}
+	.nav{
+		margin-top:0;
+		a{
+			width:auto;
+			margin-bottom:0;
+			background: @themeColor;
+			[class^="icon"]{
+				display:inline-block;
+			}
+		}
+	}
+}
 
 }
 @media (max-width: 479px) {}
