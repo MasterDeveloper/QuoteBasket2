@@ -399,6 +399,9 @@ ______________________*/
 /**********************************
 		Main Area Settings 
 ***********************************/
+#main-wrap {
+  padding-bottom: 35px;
+}
 /**********************************
 		Buttons Settings 
 ************************************/
@@ -628,6 +631,19 @@ h3 .yellow {
   color: black;
   padding-right: 5px;
 }
+.quote-thumb-list ul {
+  padding: 0;
+  list-style: none;
+  margin: 0 -8px;
+}
+.quote-thumb-list li {
+  width: 50%;
+  float: left;
+  padding: 0 8px 16px;
+}
+.quote-thumb-list a.thumbnail i {
+  font-size: 25px;
+}
 /************************
 	Author Gallery Settings 
 *************************/
@@ -700,45 +716,52 @@ a.thumbnail:hover img {
   vertical-align: middle;
 }
 /***********  for single detailed page. **********/
-.author-gallery-lg {
-  border-bottom: 8px solid #00b6ad;
+.author-quote-wrap .thumbnail {
+  margin-bottom: 20px;
 }
-.author-gallery-lg img {
-  display: block;
-  width: 100%;
+.author-quote-wrap p {
+  font-size: 20px;
+  color: black;
 }
-.quote-text {
+.author-quote-wrap .quote-footer {
+  font-size: 15px;
+}
+.author-quote-wrap .quote-footer .icon-quote-left {
+  position: static;
+  background: none;
+  width: auto;
+  height: auto;
+}
+.author-quote-wrap [class^="icon-"] {
+  color: #dcdcdc;
+}
+.author-quote-wrap a[class^="icon-"] {
+  color: #cccccc;
+}
+.author-quote-wrap a[class^="icon-"]:hover {
+  color: inherit;
+}
+.rating-bar {
+  border-bottom: 1px dotted #cccccc;
+  margin-bottom: 1em;
   font-size: 22px;
-  line-height: 1.5;
 }
-.quote-text small {
-  font-size: 13px;
-}
-.quote-text span {
-  font-size: 17px;
+.rating-bar span {
+  font-family: 'Dosis', sans-serif;
 }
 .text-lg {
   font-size: 38px;
   line-height: 1;
   padding: 15px 0;
 }
-.fb-like img {
-  display: block;
-}
-.btn-section {
-  padding-top: 45px;
-}
-.btn-section .btn {
-  margin-right: 10px;
-}
 .icon-star {
   color: #666666;
 }
 .icon-star.active {
-  color: #00b6ad;
+  color: #fdae12 !important;
 }
-.icon-star.active:hover {
-  color: #00b6ad;
+.icon-star:hover {
+  color: #fdae12 !important;
 }
 /************************
 	Author Gallery Settings 

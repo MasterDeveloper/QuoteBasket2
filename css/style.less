@@ -504,6 +504,7 @@ ______________________*/
 		Main Area Settings 
 ***********************************/
 #main-wrap{
+	padding-bottom:35px;
 }
 #main{
 
@@ -693,6 +694,22 @@ h3 .yellow{
 }
 
 
+.quote-thumb-list{
+	ul{
+		padding:0;
+		list-style:none;
+		margin:0 -8px;
+	}
+	li{
+		width:50%;
+		float:left;
+		padding:0 8px 16px;
+	}
+	a.thumbnail i{
+		font-size:25px;
+	}
+}
+
 /************************
 	Author Gallery Settings 
 *************************/
@@ -761,21 +778,40 @@ a.thumbnail{
 }
 
 /***********  for single detailed page. **********/
-.author-gallery-lg{
-	border-bottom:8px solid @themeColor;
-	img{
-		display:block;
-		width:100%;
-	}	
-}
-.quote-text{
-	font-size:22px;
-	line-height:1.5;
-	small{
-		font-size: @baseFont - 2px;
+
+.author-quote-wrap{
+	.thumbnail{
+		margin-bottom:20px;
 	}
+	p{
+		font-size:20px;
+		color:black;
+	}
+	.quote-footer{
+		font-size: @baseFont;
+		.icon-quote-left{
+			position:static;
+			background:none;
+			width:auto;
+			height:auto;
+		}
+	}
+	[class^="icon-"]{
+		color: @Color1;
+	}
+	a[class^="icon-"]{
+		color:@borderColor;
+		&:hover{
+			color:inherit;
+		}
+	}
+}
+.rating-bar{
+	border-bottom:1px dotted @borderColor;
+	margin-bottom:1em;
+	font-size:22px;
 	span{
-		font-size: @baseFont + 2px;
+		font-family: @altFamily;
 	}
 }
 .text-lg{
@@ -783,25 +819,13 @@ a.thumbnail{
 	line-height:1;
 	padding:15px 0;
 }
-.fb-like{
-	img{
-		display:block;
-	}
-}
-.btn-section{
-	padding-top:45px;
-	.btn{
-		margin-right:10px;
-	}
-}
-
 .icon-star{
 	color: @linkHoverColor;
 	&.active{
-		color:@linkColor;
-		&:hover{
-			color:@linkColor;
-		}
+		color:@yellow !important;
+	}
+	&:hover{
+		color:@yellow !important;
 	}
 }
 
