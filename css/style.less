@@ -172,7 +172,7 @@ p{
 ______________________*/
 #header-wrap{
 	background:@headerColor;
-	padding:12px 0 20px;
+	padding:5px 0;
 	.divider{
 		color: white;
 	}
@@ -180,6 +180,8 @@ ______________________*/
 		a{
 			color: #003e3b;
 			margin-right:15px;
+			font-size:1.3em;
+			line-height:1.5em;
 			&:hover{
 				color: @themeColor;
 			}
@@ -219,6 +221,7 @@ ______________________*/
 }
 .navbar-transparent{
 	background:url(../images/nav-wrap.png) repeat-x;
+	margin-bottom:0;
 	.radius(0);
 	.navbar-toggle{
 		background: black;
@@ -271,10 +274,28 @@ ______________________*/
 	Banner Settings 
 *************************/
 .banner-wrap{
-	background:url(../images/pattren-1.jpg);
+	background:url(../images/banner.png);
 	padding:25px 0;
-	margin-bottom:30px;
-
+	margin-bottom:50px;
+	.inner-section{
+		max-width:760px;
+		margin:0 25px;
+		margin:0 auto;
+		text-align:center;
+		color: white;
+		margin-bottom:35px;
+		position:relative;
+		h2{
+			color: white;
+		}
+		.btn-bottom{
+			position:absolute;
+			top:100%;
+			left:0;
+			right:0;
+			margin-top:30px;
+		}
+	}
 .input-transparent{
 	background: rgba(255,255,255,0.08);
 	border:none;
@@ -753,6 +774,14 @@ h3 .yellow{
 		font-size:25px;
 	}
 }
+.letest-quotes{
+	a.thumbnail{
+		i{
+			font-size:30px;
+		}
+	}
+}
+
 
 /************************
 	Author Gallery Settings 
@@ -830,15 +859,6 @@ a.thumbnail{
 	p{
 		font-size:20px;
 		color:black;
-	}
-	.quote-footer{
-		font-size: @baseFont;
-		.icon-quote-left{
-			position:static;
-			background:none;
-			width:auto;
-			height:auto;
-		}
 	}
 	[class^="icon-"]{
 		color: @Color1;
@@ -919,9 +939,24 @@ a.thumbnail{
 		margin-right:10px;
 		.radius(50%);
 	}
+	.quote-footer{
+		font-size: @baseFont;
+		.icon-quote-left{
+			position:static;
+			background:none;
+			width:auto;
+			height:auto;
+			line-height:inherit;
+		}
+		[class^="icon-"]{
+			color: @Color1;
+		}
+	}
 }
 .quotes-section-lg{
 	margin-left: 80px;
+	font-size:20px;
+	color:black;
 	> .icon-quote-left{
 		height:70px;
 		width:70px;
@@ -936,7 +971,10 @@ a.thumbnail{
 	padding:15px 0;
 	line-height: 1.7;
 }
-
+.border-top{
+	border-top:1px dotted @borderColor;
+	padding:10px 0;
+}
 
 .left-img-section{
 	padding-bottom:10px;
@@ -1231,16 +1269,12 @@ a.thumbnail{
 	}
 }
 
-
 #header-right{
 	text-align:center;
 }
 
 }
 @media (max-width: 479px) {
-#header-wrap{
-	padding:18px 0 12px;
-}
 #header-right{
 	a{
 		margin-bottom:10px;

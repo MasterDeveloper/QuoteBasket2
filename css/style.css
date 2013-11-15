@@ -81,7 +81,7 @@ p {
 ______________________*/
 #header-wrap {
   background: #017d77;
-  padding: 12px 0 20px;
+  padding: 5px 0;
 }
 #header-wrap .divider {
   color: white;
@@ -89,6 +89,8 @@ ______________________*/
 #header-wrap .header-social-icons a {
   color: #003e3b;
   margin-right: 15px;
+  font-size: 1.3em;
+  line-height: 1.5em;
 }
 #header-wrap .header-social-icons a:hover {
   color: #00b6ad;
@@ -123,6 +125,7 @@ ______________________*/
 }
 .navbar-transparent {
   background: url(../images/nav-wrap.png) repeat-x;
+  margin-bottom: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -182,9 +185,28 @@ ______________________*/
 	Banner Settings 
 *************************/
 .banner-wrap {
-  background: url(../images/pattren-1.jpg);
+  background: url(../images/banner.png);
   padding: 25px 0;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+.banner-wrap .inner-section {
+  max-width: 760px;
+  margin: 0 25px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  margin-bottom: 35px;
+  position: relative;
+}
+.banner-wrap .inner-section h2 {
+  color: white;
+}
+.banner-wrap .inner-section .btn-bottom {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 30px;
 }
 .banner-wrap .input-transparent {
   background: rgba(255, 255, 255, 0.08);
@@ -695,6 +717,9 @@ h3 .yellow {
 .quote-thumb-list a.thumbnail i {
   font-size: 25px;
 }
+.letest-quotes a.thumbnail i {
+  font-size: 30px;
+}
 /************************
 	Author Gallery Settings 
 *************************/
@@ -773,15 +798,6 @@ a.thumbnail:hover img {
 .author-quote-wrap p {
   font-size: 20px;
   color: black;
-}
-.author-quote-wrap .quote-footer {
-  font-size: 15px;
-}
-.author-quote-wrap .quote-footer .icon-quote-left {
-  position: static;
-  background: none;
-  width: auto;
-  height: auto;
 }
 .author-quote-wrap [class^="icon-"] {
   color: #dcdcdc;
@@ -862,8 +878,23 @@ a.thumbnail:hover img {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+.quotes-section .quote-footer {
+  font-size: 15px;
+}
+.quotes-section .quote-footer .icon-quote-left {
+  position: static;
+  background: none;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+}
+.quotes-section .quote-footer [class^="icon-"] {
+  color: #dcdcdc;
+}
 .quotes-section-lg {
   margin-left: 80px;
+  font-size: 20px;
+  color: black;
 }
 .quotes-section-lg > .icon-quote-left {
   height: 70px;
@@ -876,6 +907,10 @@ a.thumbnail:hover img {
   border-bottom: 1px dotted #cccccc;
   padding: 15px 0;
   line-height: 1.7;
+}
+.border-top {
+  border-top: 1px dotted #cccccc;
+  padding: 10px 0;
 }
 .left-img-section {
   padding-bottom: 10px;
@@ -1209,9 +1244,6 @@ a.thumbnail:hover img {
   }
 }
 @media (max-width: 479px) {
-  #header-wrap {
-    padding: 18px 0 12px;
-  }
   #header-right a {
     margin-bottom: 10px;
   }
