@@ -238,7 +238,7 @@ ______________________*/
 			text-shadow: 1px 1px 1px black;
 			.gradient(#00d9cf, #017e77);
 			.radius(0 0 4px 4px);
-			border: 1px solid #017e77;
+			border: 1px solid #008f88;
 			border-top:none;
 			width:100px;
 			text-align:center;
@@ -299,7 +299,6 @@ ______________________*/
 	border-top: 1px dotted @Color2;
 	border-bottom: 1px dotted @Color2;
 	margin-bottom:25px;
-	margin-top:25px;
 	li{
 		display:inline;
 		display:inline-block;
@@ -341,23 +340,6 @@ ______________________*/
 		}
 	}
 }
-.theme-pagination-2{
-	li{
-		a{
-			background: @textColor + #333;
-			&:hover{
-				background: #171717;
-			}
-		}
-		
-		&.active{
-			a{
-				background: #171717;
-			}
-		}
-	}
-}
-
 .list-section{
 	margin-bottom:50px;
 	a{
@@ -530,6 +512,14 @@ ______________________*/
 /**********************************
 		Buttons Settings 
 ************************************/
+.btn{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	&:focus{
+		outline:none;
+	}
+}
 .button-variant(@color; @background; @border) {
   color: @color;
   .gradient(@background, @border);
@@ -563,25 +553,6 @@ ______________________*/
   }
 }
 
-.btn-primary{
-	white-space:nowrap;
-	text-overflow:ellipsis;
-	overflow:hidden;
-	.gradient(#116cc9, #0c60b4);
-	color:white;
-	text-shadow:-1px -1px 1px #000;
-	&.btn-block{
-		display:block;
-		.box-sizing;
-		padding-left:15px;
-		padding-right:15px;
-	}
-	&:active, &:focus,
-	&:hover{
-		color: white;
-		outline:none;
-	}
-	}
 
 .btn-transparent{
 	background:url(../images/btn-tranparent.png);
@@ -600,6 +571,22 @@ ______________________*/
 }
 .btn-facebook {
 	.button-variant(white, #5977ad, #385182);
+	.icon-facebook{
+		display:inline-block;
+		border-right:2px groove #385182;
+		padding-right:10px;
+		line-height:32px;
+		margin:-6px 0;
+		vertical-align:top;
+	}
+}
+.rtl .btn-facebook {
+	.icon-facebook{
+		border-right:none;
+		border-left: 2px groove #385182;
+		padding-right:0;
+		padding-left:10px;
+	}
 }
 
 /**********************************
@@ -644,14 +631,7 @@ h3 .yellow{
 		color:black;
 	}
 }
-.btn{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-	&:focus{
-		outline:none;
-	}
-}
+
 .quote-box{
 	position:relative;
 	background:@themeColor;
@@ -716,11 +696,6 @@ h3 .yellow{
 /************************
 	Author Gallery Settings 
 *************************/
-.author-gallery-wrap-2{
-	.theme-pagination{
-		margin-top:0;
-	}
-}
 .author-gallery-wrap{
 }
 .thumb-lists{
@@ -932,6 +907,7 @@ a.thumbnail{
 	margin-bottom:9px;
 	text-align:center;
 	padding:15px 0;
+	color:black;
 	p{
 		margin-bottom:0;
 	}
@@ -1136,18 +1112,42 @@ a.thumbnail{
 	.navbar-brand{
 		margin-top:0px;	
 	}
+	.navbar-collapse{
+		padding:0;
+	}
 	.nav{
-		margin-top:0;
+		margin:0;
+		
 		a{
 			width:auto;
-			margin-bottom:0;
+			margin:0;
 			background: @themeColor;
+			border:none;
+			.radius(0);
+			.box-shadow(none);
+			text-align:left;
 			[class^="icon"]{
 				display:inline-block;
+				margin-right:15px;
 			}
 		}
 	}
 }
 
+
+#header-right{
+	text-align:center;
 }
-@media (max-width: 479px) {}
+
+}
+@media (max-width: 479px) {
+#header-wrap{
+	padding:18px 0 12px;
+}
+#header-right{
+	a{
+		margin-bottom:10px;
+	}
+}
+
+}

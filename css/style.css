@@ -153,7 +153,7 @@ ______________________*/
   -moz-border-radius: 0 0 4px 4px;
   -webkit-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
-  border: 1px solid #017e77;
+  border: 1px solid #008f88;
   border-top: none;
   width: 100px;
   text-align: center;
@@ -205,7 +205,6 @@ ______________________*/
   border-top: 1px dotted #ababab;
   border-bottom: 1px dotted #ababab;
   margin-bottom: 25px;
-  margin-top: 25px;
 }
 .theme-pagination li {
   display: inline;
@@ -243,15 +242,6 @@ ______________________*/
 .theme-pagination li.active a {
   background: #00b6ad;
   color: white;
-}
-.theme-pagination-2 li a {
-  background: #999999;
-}
-.theme-pagination-2 li a:hover {
-  background: #171717;
-}
-.theme-pagination-2 li.active a {
-  background: #171717;
 }
 .list-section {
   margin-bottom: 50px;
@@ -412,33 +402,12 @@ ______________________*/
 /**********************************
 		Buttons Settings 
 ************************************/
-.btn-primary {
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.btn {
   overflow: hidden;
-  background-color: #0c60b4;
-  background-image: -moz-linear-gradient(top, #116cc9, #0c60b4);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#116cc9), to(#0c60b4));
-  background-image: -webkit-linear-gradient(top, #116cc9, #0c60b4);
-  background-image: -o-linear-gradient(top, #116cc9, #0c60b4);
-  background-image: linear-gradient(to bottom, #116cc9, #0c60b4);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff116cc9', endColorstr='#ff0c60b4', GradientType=0);
-  color: white;
-  text-shadow: -1px -1px 1px #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.btn-primary.btn-block {
-  display: block;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-  color: white;
+.btn:focus {
   outline: none;
 }
 .btn-transparent {
@@ -543,6 +512,20 @@ fieldset[disabled] .btn-facebook.active {
   background-color: #5977ad;
   border-color: #385182;
 }
+.btn-facebook .icon-facebook {
+  display: inline-block;
+  border-right: 2px groove #385182;
+  padding-right: 10px;
+  line-height: 32px;
+  margin: -6px 0;
+  vertical-align: top;
+}
+.rtl .btn-facebook .icon-facebook {
+  border-right: none;
+  border-left: 2px groove #385182;
+  padding-right: 0;
+  padding-left: 10px;
+}
 /**********************************
 		Sidebar Settings 
 ***********************************/
@@ -582,14 +565,6 @@ h3 .yellow {
 .sidebar-header h3 {
   margin-bottom: 0;
   color: black;
-}
-.btn {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.btn:focus {
-  outline: none;
 }
 .quote-box {
   position: relative;
@@ -656,9 +631,6 @@ h3 .yellow {
 /************************
 	Author Gallery Settings 
 *************************/
-.author-gallery-wrap-2 .theme-pagination {
-  margin-top: 0;
-}
 .thumb-lists a.thumbnail {
   background: #cecece;
   margin-bottom: 8px;
@@ -858,6 +830,7 @@ a.thumbnail:hover img {
   margin-bottom: 9px;
   text-align: center;
   padding: 15px 0;
+  color: black;
 }
 .footer-bottom p {
   margin-bottom: 0;
@@ -1102,18 +1075,38 @@ a.thumbnail:hover img {
   .navbar-transparent .navbar-brand {
     margin-top: 0px;
   }
+  .navbar-transparent .navbar-collapse {
+    padding: 0;
+  }
   .navbar-transparent .nav {
-    margin-top: 0;
+    margin: 0;
   }
   .navbar-transparent .nav a {
     width: auto;
-    margin-bottom: 0;
+    margin: 0;
     background: #00b6ad;
+    border: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-align: left;
   }
   .navbar-transparent .nav a [class^="icon"] {
     display: inline-block;
+    margin-right: 15px;
+  }
+  #header-right {
+    text-align: center;
   }
 }
 @media (max-width: 479px) {
-  
+  #header-wrap {
+    padding: 18px 0 12px;
+  }
+  #header-right a {
+    margin-bottom: 10px;
+  }
 }
