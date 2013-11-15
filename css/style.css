@@ -187,11 +187,10 @@ ______________________*/
 .banner-wrap {
   background: url(../images/banner.png);
   padding: 25px 0;
-  margin-bottom: 50px;
 }
 .banner-wrap .inner-section {
   max-width: 760px;
-  margin: 0 25px;
+  padding: 0 15px;
   margin: 0 auto;
   text-align: center;
   color: white;
@@ -239,9 +238,9 @@ ______________________*/
   background: #cccccc;
   padding: 1px 9px 2px;
   font-weight: bold;
-  min-width: 30px;
-  height: 30px;
-  line-height: 26px;
+  min-width: 28px;
+  height: 28px;
+  line-height: 22px;
   text-align: center;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -264,6 +263,24 @@ ______________________*/
 .theme-pagination li.active a {
   background: #00b6ad;
   color: white;
+}
+.theme-pagination-2 li:last-child a {
+  color: black;
+}
+.theme-pagination-2 li:last-child a:hover {
+  color: white;
+}
+.theme-pagination-2 li:first-child {
+  vertical-align: middle;
+}
+.theme-pagination-2 li:first-child a {
+  background: #666666;
+  width: 50px;
+  height: 50px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  line-height: 45px;
 }
 .list-section {
   margin-bottom: 50px;
@@ -289,49 +306,25 @@ ______________________*/
 }
 .author-listing-section .alphabet {
   color: white;
-  display: block;
   padding: 5px;
-  text-align: center;
-  background: #1f9952;
+  background: #00b6ad;
   font-size: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 37px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
   margin-bottom: 15px;
-}
-.author-listing-section .alphabet.red {
-  background: #cc3333;
-}
-.author-listing-section .alphabet.yellow {
-  background: #ee9912;
-}
-.author-listing-section .alphabet.blue {
-  background: #0a476e;
-}
-.author-listing-section .alphabet.green {
-  background: #00cc99;
-}
-.author-listing-section .alphabet.pink {
-  background: #e26b60;
-}
-.author-listing-section .alphabet.purple {
-  background: #8a1f6a;
 }
 .author-listing-section a {
   color: #666666;
 }
 .author-listing-section a:hover {
   color: #00b6ad;
-}
-.author-listing-section .theme-btn {
-  display: block;
-  background: black;
-  color: white;
-  margin-bottom: 20px;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-}
-.author-listing-section .theme-btn:hover {
-  background: #00b6ad;
-  color: white;
 }
 .author-listing {
   margin-bottom: 20px;
@@ -426,6 +419,7 @@ ______________________*/
 ***********************************/
 #main-wrap {
   padding-bottom: 35px;
+  padding-top: 50px;
 }
 /**********************************
 		Buttons Settings 
@@ -716,6 +710,9 @@ h3 .yellow {
 }
 .quote-thumb-list a.thumbnail i {
   font-size: 25px;
+}
+.letest-quotes h3 {
+  color: #00b6ad;
 }
 .letest-quotes a.thumbnail i {
   font-size: 30px;
@@ -1035,6 +1032,11 @@ a.thumbnail:hover img {
 .tab-pane {
   padding: 25px 0 0;
 }
+.input-group {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
 .input-group .btn {
   transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
   border: 1px solid #cccccc;
@@ -1194,6 +1196,9 @@ a.thumbnail:hover img {
   .quotes-footer div {
     text-align: center;
     padding-bottom: 5px;
+  }
+  .author-listing-section .alphabet {
+    margin: 0 0 10px;
   }
   .sidebar-section img {
     display: block;

@@ -276,10 +276,9 @@ ______________________*/
 .banner-wrap{
 	background:url(../images/banner.png);
 	padding:25px 0;
-	margin-bottom:50px;
 	.inner-section{
 		max-width:760px;
-		margin:0 25px;
+		padding:0 15px;
 		margin:0 auto;
 		text-align:center;
 		color: white;
@@ -330,9 +329,9 @@ ______________________*/
 			background: @borderColor;
 			padding:1px 9px 2px;
 			font-weight:bold;
-			min-width:30px;
-			height:30px;
-			line-height:26px;
+			min-width:28px;
+			height:28px;
+			line-height:22px;
 			text-align:center;
 			.box-sizing(border-box);
 			.radius(15px);
@@ -357,6 +356,28 @@ ______________________*/
 			a{
 				background: @themeColor;
 				color: white;
+			}
+		}
+	}
+}
+.theme-pagination-2{
+	li{
+		&:last-child{
+			a{
+				color:black;
+				&:hover{
+					color:white;
+				}
+			}
+		}
+		&:first-child{
+			vertical-align:middle;
+			a{
+				background: @textColor;
+				width:50px;
+				height:50px;
+				.radius(50%);
+				line-height:45px;
 			}
 		}
 	}
@@ -389,46 +410,22 @@ ______________________*/
 	}
 	.alphabet{
 		color:white;
-		display:block;
 		padding:5px;
-		text-align:center;
-		background:@green;
+		background:@themeColor;
 		font-size:20px;
+		width:50px;
+		height:50px;
+		line-height:37px;
+		.radius(50%);
+		margin:0 auto;
+		display:block;
+		text-align:center;
 		margin-bottom:15px;
-		&.red{
-			background : #cc3333;
-		}
-		&.yellow{
-			background : #ee9912;
-		}
-		&.blue{
-			background:	#0a476e;
-		}
-		&.green{
-			background:	#00cc99;
-		}
-		&.pink{
-			background:#e26b60;
-		}
-		&.purple{
-			background:#8a1f6a;
-		}
 	}
 	a{
 		color: @textColor;
 		&:hover{
 			color: @themeColor;
-		}
-	}
-	.theme-btn{
-		display:block;
-		background:black;
-		color:white;
-		margin-bottom:20px;
-		.radius(0);
-		&:hover{
-			background:@themeColor;
-			color:white;
 		}
 	}
 }
@@ -529,6 +526,7 @@ ______________________*/
 ***********************************/
 #main-wrap{
 	padding-bottom:35px;
+	padding-top:50px;
 }
 #main{
 
@@ -775,6 +773,9 @@ h3 .yellow{
 	}
 }
 .letest-quotes{
+	h3{
+		color: @themeColor;
+	}
 	a.thumbnail{
 		i{
 			font-size:30px;
@@ -1103,6 +1104,7 @@ a.thumbnail{
 
 
 .input-group{
+	.radius(3px);
 	.btn{
 		transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 		border:1px solid @borderColor;
@@ -1221,6 +1223,9 @@ a.thumbnail{
 	}
 }
 
+.author-listing-section .alphabet{
+	margin:0 0 10px;
+}
 .sidebar-section{
 	img{
 		display:block;
