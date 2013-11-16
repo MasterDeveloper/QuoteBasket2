@@ -89,11 +89,19 @@ ______________________*/
 #header-wrap .header-social-icons a {
   color: #003e3b;
   margin-right: 15px;
-  font-size: 1.3em;
+  font-size: 20px;
   line-height: 1.5em;
+  vertical-align: middle;
+  display: inline-block;
 }
 #header-wrap .header-social-icons a:hover {
   color: #00b6ad;
+}
+#header-wrap .header-social-icons a .icon-google-plus {
+  font-size: 18px;
+}
+#header-wrap .header-social-icons a .icon-pinterest {
+  font-size: 22px;
 }
 #header-right a {
   margin-left: 10px;
@@ -215,9 +223,6 @@ ______________________*/
 .banner-wrap .form-group {
   float: none !important;
 }
-.banner-wrap .form-control:focus {
-  box-shadow: 0 1px 1px rgba(253, 115, 0, 0.075) inset, 0 0 8px rgba(253, 115, 0, 0.6);
-}
 /******************************
 	Pagination Settings 
 *******************************/
@@ -240,8 +245,9 @@ ______________________*/
   font-weight: bold;
   min-width: 28px;
   height: 28px;
-  line-height: 22px;
+  line-height: 25px;
   text-align: center;
+  vertical-align: top;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -256,6 +262,7 @@ ______________________*/
 .theme-pagination li:last-child a,
 .theme-pagination li:first-child a {
   color: white;
+  line-height: 28px;
 }
 .theme-pagination li.large a {
   min-width: 50px;
@@ -266,6 +273,7 @@ ______________________*/
 }
 .theme-pagination-2 li:last-child a {
   color: black;
+  line-height: 26px;
 }
 .theme-pagination-2 li:last-child a:hover {
   color: white;
@@ -295,10 +303,28 @@ ______________________*/
 /******************************
 	Author Lists Settings 
 *******************************/
+.author-listing-section {
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 35px;
+  padding-bottom: 15px;
+}
+.author-listing-section:before {
+  display: inline-block;
+  content: '';
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #00b6ad;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+}
 .author-listing-section ul {
   list-style: none;
   padding-left: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   min-height: 150px;
 }
 .author-listing-section ul li {
@@ -330,10 +356,10 @@ ______________________*/
   margin-bottom: 20px;
 }
 ::selection {
-  color: #111;
+  color: red;
 }
 ::-moz-selection {
-  color: #111;
+  color: skyblue;
 }
 .list-quote {
   padding: 0;
@@ -431,6 +457,10 @@ ______________________*/
 }
 .btn:focus {
   outline: none;
+}
+.btn-block {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .btn-transparent {
   background: url(../images/btn-tranparent.png);
@@ -852,6 +882,15 @@ a.thumbnail:hover img {
 /************************
 	Author Gallery Settings 
 *************************/
+.sidebar-section .quotes-section .icon-quote-left {
+  color: white;
+}
+.sidebar-section .quotes-section p {
+  margin-bottom: 7px;
+}
+.sidebar-section .quote-footer .icon-quote-left {
+  font-size: 14px;
+}
 .quotes-section {
   position: relative;
   margin: 0 0 25px 50px;
@@ -1051,12 +1090,42 @@ a.thumbnail:hover img {
   border-right: none;
 }
 .input-group .form-control:focus + .input-group-btn .btn {
-  border: 1px solid #66AFE9;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+  border-color: #00b6ad;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-left: none;
+}
+/**********************
+	 SignUp/Login
+ **********************/
+.model-wrap {
+  max-width: 600px;
+  margin: 15px auto;
+  background: white;
+  border: 5px solid #00b6ad;
+  border-radius: 15px;
+}
+.model-wrap .form-control:focus {
+  border-color: #00b6ad;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
+}
+.model-wrap h3 {
+  margin: 10px 0;
+  color: #00b6ad;
+  font-weight: 500;
+}
+.modal-header h3 {
+  margin-bottom: 0;
+}
+.modal-body {
+  color: #00b6ad;
+  padding: 10px 20px 20px;
+}
+.form-control:focus {
+  border-color: #00b6ad;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
 }
 /**********************
 	 Global Classes
@@ -1099,16 +1168,11 @@ a.thumbnail:hover img {
 	 Global Classes End
  *****************************/
 @media (max-width: 1200px) {
-  .slider-wrap p,
-  .text-lg {
-    font-size: 32px;
-  }
   .theme-pagination li {
     margin: 0 0 4px;
   }
-  .author-listing-section ul {
-    padding: 0;
-    padding-left: 5px;
+  .social-icons a {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 979px) {
@@ -1179,9 +1243,21 @@ a.thumbnail:hover img {
   }
 }
 @media (max-width: 767px) {
+  /**********************
+  	 SignUp/Login
+   **********************/
+  .model-wrap {
+    margin: 15px;
+  }
+  .model-wrap .btn {
+    width: 100%;
+  }
   .form-group {
     display: inline-block;
     vertical-align: top;
+  }
+  h2 {
+    font-size: 40px;
   }
   /**********************
   	 Theme Tabs
@@ -1198,7 +1274,7 @@ a.thumbnail:hover img {
     padding-bottom: 5px;
   }
   .author-listing-section .alphabet {
-    margin: 0 0 10px;
+    margin: 0 auto 10px;
   }
   .sidebar-section img {
     display: block;
@@ -1244,12 +1320,28 @@ a.thumbnail:hover img {
     display: inline-block;
     margin-right: 15px;
   }
+  .container > .navbar-header,
+  .container > .navbar-collapse {
+    margin: 0 -16px;
+  }
+  .theme-pagination,
   #header-right {
     text-align: center;
+  }
+  .rating-bar {
+    font-size: 18px;
   }
 }
 @media (max-width: 479px) {
   #header-right a {
     margin-bottom: 10px;
+  }
+  .left-img-section .left-image {
+    text-align: center;
+    width: auto;
+    float: none;
+  }
+  .left-img-section .section-header {
+    margin-left: 0;
   }
 }

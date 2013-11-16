@@ -48,7 +48,7 @@
 <div id="header-wrap">
 	<div class="container">
         <header id="header" class="row">
-        	<div class="col-sm-5 visible-lg visible-md" >
+        	<div class="col-md-5 visible-lg visible-md" >
 	            <span class="header-social-icons">
                     <a href="#"><span class="icon-facebook"></span></a>
                     <a href="#"><span class="icon-twitter"></span></a>
@@ -57,10 +57,10 @@
                     <a href="#"><span class="icon-youtube-play"></span></a>
                 </span>
             </div>
-            <div id="header-right" class="col-lg-7 col-sm-12 text-right">
+            <div id="header-right" class="col-md-7 col-sm-12 text-right">
             		<a href="#" class="btn btn-facebook"><span class="icon-facebook"></span>  &nbsp;Connect using Facebook</a>
-                    <a href="#" class="btn btn-default">&nbsp;&nbsp;&nbsp;Log In&nbsp;&nbsp;&nbsp;</a>
-                    <a href="#" class="btn btn-yellow">Register Now</a>
+                    <a href="#myModal" role="button"  data-toggle="modal"class="btn btn-default">&nbsp;&nbsp;&nbsp;Log In&nbsp;&nbsp;&nbsp;</a>
+                    <a href="#myModal-2" role="button"  data-toggle="modal" class="btn btn-yellow">Register Now</a>
                 </div>
             </div>
         </header>
@@ -104,11 +104,11 @@
         	<div class="col-sm-9">
             	<h2>Picture Quotes</h2>
                 <ul class="nav nav-justified theme-tabs">
-                    <li><a data-toggle="tab" href="#tab1">Recently Added</a></li>
+                    <li class="active"><a data-toggle="tab" href="#tab1">Recently Added</a></li>
                     <li><a data-toggle="tab" href="#tab2">Popular Quotes</a></li>
                 </ul>
                 <div class="tab-content">
-                    <div id="tab1" class="tab-pane active">
+                    <div id="tab1" class="tab-pane fade in active">
                         <div class="row">
                             <div class="col-sm-6 author-gallery">
                                 <a class="thumbnail" href="#">
@@ -203,7 +203,7 @@
                         </div>
                         
                     </div>
-                    <div id="tab2" class="tab-pane">
+                    <div id="tab2" class="tab-pane fade">
                         <p>Popular Quotes</p>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
                     </div>
                     <div class="sidebar-section">
                         <div class="sidebar-header">
-                            <h3><span class="icon-star yellow"></span> Quote of the Day</h3>
+                            <h3><span class="icon-list-ul yellow"></span> Quote by Topics</h3>
                         </div>
                         <div class="quote-list">
                         	<ul class="col-lg-6">
@@ -279,7 +279,7 @@
                     </div>
                     <div class="sidebar-section">
                         <div class="sidebar-header">
-                            <h3><span class="icon-star yellow"></span> Quote of the Day</h3>
+                            <h3><span class="icon-user yellow"></span> Quote by Author</h3>
                         </div>
                         <div class="quote-list">
                         	<ul>
@@ -388,6 +388,55 @@
 <!--footer end -->
 
 </div><!--container-fluid -->
+<div id="myModal" class="modal fade signin-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="model-wrap">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Log In</h3>
+        </div>
+        <div class="modal-body">
+            <form  class="row">
+                <div class="col-sm-12">
+                <label>Enter Your Email Address</label>    
+                <p><input type="text" placeholder="Plese Enter Your Email Address" class="form-control"></p>
+                <label>Enter Your Password</label>    
+                <p><input type="text" placeholder="Password" class="form-control"></p>
+                <p class="clearfix"><button class="btn btn-primary col-sm-6">Log In</button></p>
+                <p><label>OR</label></p>
+                <p class="clearfix"><button class="btn btn-primary col-sm-6"><span class="icon-facebook"></span> Log In with Facebook</button></p>
+                <p class="clearfix"><button class="btn btn-info col-sm-6"><span class="icon-twitter"></span> Log In with Twitter </button></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
+
+
+<div id="myModal-2" class="modal fade signin-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="model-wrap">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Register Now</h3>
+        </div>
+        <div class="modal-body">
+            <form  class="row">
+                <div class="col-sm-12">
+                    <label>Name</label>    
+                    <p><input type="text" placeholder="Full Name" class="form-control"></p>
+                    <label>User Name</label>    
+                    <p><input type="text" placeholder="Choose a User Name" class="form-control"></p>
+                    <label>Email Address</label>    
+                    <p><input type="text" placeholder="Plese Enter Your Email Address" class="form-control"></p>
+                    <label>Password</label>    
+                    <p><input type="text" placeholder="Password" class="form-control"></p>
+                    <label>Confirm Password</label>    
+                    <p><input type="text" placeholder="Confirm Password" class="form-control"></p>
+                    <button class="btn btn-primary col-sm-6 col-xs-6">Register Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

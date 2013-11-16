@@ -177,13 +177,22 @@ ______________________*/
 		color: white;
 	}
 	.header-social-icons{
+		
 		a{
 			color: #003e3b;
 			margin-right:15px;
-			font-size:1.3em;
+			font-size:20px;
 			line-height:1.5em;
+			vertical-align:middle;
+			display:inline-block;
 			&:hover{
 				color: @themeColor;
+			}
+			.icon-google-plus{
+				font-size: 18px;
+			}
+			.icon-pinterest{
+				font-size:22px;
 			}
 		}
 	}
@@ -303,9 +312,6 @@ ______________________*/
 .form-group{
 	float:none !important;
 }
-.form-control:focus{
-	box-shadow:0 1px 1px rgba(253, 115, 0, 0.075) inset, 0 0 8px rgba(253, 115, 0, 0.6);
-}
 
 }
 
@@ -331,8 +337,9 @@ ______________________*/
 			font-weight:bold;
 			min-width:28px;
 			height:28px;
-			line-height:22px;
+			line-height:25px;
 			text-align:center;
+			vertical-align:top;
 			.box-sizing(border-box);
 			.radius(15px);
 			&:hover{
@@ -344,6 +351,7 @@ ______________________*/
 		&:first-child{
 			a{
 				color:white;
+				line-height:28px;
 			}
 		}
 		&.large{
@@ -365,6 +373,7 @@ ______________________*/
 		&:last-child{
 			a{
 				color:black;
+				line-height:26px;
 				&:hover{
 					color:white;
 				}
@@ -399,10 +408,29 @@ ______________________*/
 *******************************/
 
 .author-listing-section{
+	position:relative;
+	border-bottom:1px solid @borderColor;
+	margin-bottom:35px;
+	padding-bottom:15px;
+	&:before{
+		display:inline-block;
+		content: '';
+		border-width:10px;
+		border-style:solid;
+		border-color:transparent;
+		border-top-color:@themeColor;
+		position:absolute;
+		top:100%;
+		left:50%;
+		margin-left:-10px;
+		
+		
+
+	}
 	ul{
 		list-style:none;
 		padding-left:25px;
-		margin-bottom:20px;
+		margin-bottom:0;
 		min-height:150px;
 		li{
 			margin-bottom:5px;
@@ -434,10 +462,10 @@ ______________________*/
 }
 
 ::selection{
-	color:#111;
+	color:red;
 }
 ::-moz-selection{
-	color:#111;
+	color:skyblue;
 } 
 
 .list-quote{
@@ -542,6 +570,10 @@ ______________________*/
 	&:focus{
 		outline:none;
 	}
+}
+.btn-block{
+	padding-left:10px;
+	padding-right:10px;
 }
 .button-variant(@color; @background; @border) {
   color: @color;
@@ -919,7 +951,22 @@ a.thumbnail{
 /************************
 	Author Gallery Settings 
 *************************/
+.sidebar-section{
+	.quotes-section{
+		.icon-quote-left{
+			color: white;
+		}
+		p{
+			margin-bottom:7px;
+		}
+	}
+	.quote-footer{
+		.icon-quote-left{
+			font-size:14px;
+		}
+	}
 
+}
 .quotes-section{
 	position:relative;
 	margin:0 0 25px 50px;
@@ -1121,8 +1168,8 @@ a.thumbnail{
 	}
 	.form-control:focus + .input-group-btn .btn{
 		
-		border:1px solid #66AFE9;
-		box-shadow:	0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+		border-color:@themeColor;
+		box-shadow:	0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
 		.box-sizing;
 		border-left:none;
 		
@@ -1130,7 +1177,36 @@ a.thumbnail{
 }
 
 
-
+/**********************
+	 SignUp/Login
+ **********************/
+.model-wrap{
+	max-width:600px;
+	margin:15px auto;
+	background:white;
+	border:5px solid @themeColor;
+	border-radius: 15px;
+	.form-control:focus{
+		border-color:@themeColor;
+		box-shadow:	0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
+	}
+}
+.model-wrap h3{
+	margin:10px 0;
+	color:@themeColor;
+	font-weight:500;
+}
+.modal-header h3{
+	margin-bottom: 0;
+}
+.modal-body{
+	color:@themeColor;
+	padding:10px 20px 20px;
+}
+.form-control:focus{
+	border-color:@themeColor;
+	box-shadow:	0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 182, 173, 0.6);
+}
 
 
 
@@ -1152,6 +1228,12 @@ a.thumbnail{
 	height: 0;
 }
 
+
+
+
+
+
+
 /* Alignments */
 .center { text-align:center }
 .right { text-align:right }
@@ -1163,18 +1245,15 @@ a.thumbnail{
  *****************************/
 
 @media (max-width: 1200px){
-.slider-wrap p,
-.text-lg{
-	font-size:32px;
-}
 .theme-pagination li{
 	margin:0 0 4px;
 }
-
-.author-listing-section ul{
-	padding:0;
-	padding-left:5px;
+.social-icons{
+	a{
+		margin-bottom:10px;
+	}
 }
+
 }
 @media (max-width: 979px) {
 .row{
@@ -1198,10 +1277,25 @@ a.thumbnail{
 
 }
 @media (max-width: 767px) {
+/**********************
+	 SignUp/Login
+ **********************/
+.model-wrap{
+	margin:15px;
+	.btn{
+		width:100%;
+	}
+}
+	
 .form-group{
 	display:inline-block;
 	vertical-align:top;
 }
+
+h2{
+	font-size:40px;
+}
+
 
 /**********************
 	 Theme Tabs
@@ -1224,7 +1318,7 @@ a.thumbnail{
 }
 
 .author-listing-section .alphabet{
-	margin:0 0 10px;
+	margin:0 auto 10px;
 }
 .sidebar-section{
 	img{
@@ -1273,10 +1367,17 @@ a.thumbnail{
 		}
 	}
 }
-
+.container > .navbar-header, .container > .navbar-collapse{
+	margin:0 -16px;
+}
+.theme-pagination,
 #header-right{
 	text-align:center;
 }
+.rating-bar{
+	font-size:18px;
+}
+
 
 }
 @media (max-width: 479px) {
@@ -1285,5 +1386,17 @@ a.thumbnail{
 		margin-bottom:10px;
 	}
 }
+
+.left-img-section{
+	.left-image{
+		text-align:center;
+		width:auto;
+		float:none;
+	}
+	.section-header{
+		margin-left:0;
+	}
+}
+
 
 }
